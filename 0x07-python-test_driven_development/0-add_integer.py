@@ -1,18 +1,33 @@
 #!/usr/bin/python3
-""" this module is for add_integer function """
+""" this module sums integers """
 
 
 def add_integer(a, b=98):
+    """ sum integers
+    Args:
+        a (int): [Mandatory int to pass in]
+        b (int): [Optional int to pass in]
+    Returns:
+        int: [Sum of a and b]
     """
-    value a added to value b, return sum
-    """
-
-    if not isinstance(a, (int, float)):
+    try:
+        if isinstance(a, int):
+            pass
+        elif isinstance(a, float):
+            a = round(int(a), 0)
+        else:
+            raise TypeError
+    except Exception:
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+
+    try:
+        if isinstance(b, int):
+            pass
+        elif isinstance(b, float):
+            b = round(int(b), 2)
+        else:
+            raise TypeError
+    except Exception:
         raise TypeError("b must be an integer")
 
-    add_int = a + b
-    if type(add_int) is float:
-        return int(add_int)
-    return add_int
+    return a + b
