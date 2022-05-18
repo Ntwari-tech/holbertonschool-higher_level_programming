@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-
-""" a Square with size, private instance attriute size, no type/value"""
+"""makes a class is for a square"""
 
 
 class Square:
-
-    """a class that creates a single attribute"""
-
-    def __init__(self, size):
-        self.__size = size
+    """Here it is. Here's the square."""
+    def __init__(self, size=0):
+        if isinstance(size, int):
+            if size < 0:
+                raise ValueError("size must be >= 0")
+            else:
+                self.__size = size
+        else:
+            raise ValueError("size must be an integer")
