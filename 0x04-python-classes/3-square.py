@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """ a Square with size, private instance attribute size
     size is an int else raise typeerror, exception
     if size < 0 raise valueerror, exception
