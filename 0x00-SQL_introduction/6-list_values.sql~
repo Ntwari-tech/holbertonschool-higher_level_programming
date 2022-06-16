@@ -1,0 +1,2 @@
+-- list all row of the table
+SHOW ROWS  FROM first_table
