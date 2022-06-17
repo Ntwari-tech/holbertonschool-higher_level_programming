@@ -43,7 +43,7 @@ def split_list(a_list, number):
 
 
 def identify(matrix):
-    """ confirm that matrix is a list of lists
+    """ identifies the matrix to be true with the lists.
     Args:
         matrix ([[list]]): list of lists
     Returns:
