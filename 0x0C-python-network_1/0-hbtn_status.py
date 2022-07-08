@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-""" query the status of a given url """
-
-
-if __name__ == "__main__":
-    import urllib.request as rq
-    req = rq.Request("https://intranet.hbtn.io/status")
-    with rq.urlopen(req) as response:
-        site = response.read()
-        print("Body response:")
-        print(f"\t- type: {type(site)}")
-        print(f"\t- content: {site}")
-        print(f"\t- utf8 content: {site.decode('utf-8')}")
+import urllib.request
+"""fetches a website"""
+with urllib.request.urlopen('https://intranet.hbtn.io/status/') as r:
+    html = r.read()
+    print("Body response:")
+    print("\t- type: {}".format(type(html)))
+    print("\t- content: {}".format(html))
+    print("\t- utf8 content: {}".format(html.decode('utf-8')))
