@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import urllib.request
-"""fetches a website"""
+""" website fetcher """
 with urllib.request.urlopen('https://intranet.hbtn.io/status/') as r:
     html = r.read()
     print("Body response:")
