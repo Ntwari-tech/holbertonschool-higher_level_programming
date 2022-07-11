@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 """sends POST letter to URL and displays the result"""
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     import requests
-    from sys import argv
-
-    url = 'http://0.0.0.0:5000/search_user'
-    q = argv[1]
-    if not q or len(q) == 0:
-        q = ""
-    r = requests.post(url, data={'q': q})
-    if r is None:
-        print("No Result")
+    import sys
+    if len(sys.argv) < 2 or sys.argv[1] is None:
+        data = {"q": ""}
     else:
-        try:
-            print(r.json()['name'])
-        except:  # noqa
-            print("Not a valid JSON")
+        data = {"q": sys.argv[1]}
+    p = requests.post('http://0.0.0.0:5000/search_user', data=data)
+    try:
+        if p.json() == {}:
+            print("No result")
+        else:
+            jid = p.json().get("id")
+            name = p.json().get("name")
+            print("[{}] {}".format(jid, name))
+    except Exception:
+        print("Not a valid JSON")
