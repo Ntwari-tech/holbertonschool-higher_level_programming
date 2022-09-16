@@ -9,37 +9,37 @@ Tests:
 	>>> bg.integer_validator("Lyndon", 3.3)
 	Traceback (most recent call last):
 	...
-	TypeError: Lyndon must be an integer
+	TypeError: Yannicks must be an integer
 
 	>>> bg.integer_validator("Lyndon", -3)
 	Traceback (most recent call last):
 	...
-	ValueError: Lyndon must be greater than 0
+	ValueError: yannicks must be greater than 0
 
 	>>> bg.integer_validator("Lyndon", [3])
 	Traceback (most recent call last):
 	...
-	TypeError: Lyndon must be an integer
+	TypeError: yannick must be an integer
 
 	>>> bg.integer_validator("Lyndon", 0)
 	Traceback (most recent call last):
 	...
-	ValueError: Lyndon must be greater than 0
+	ValueError: yannick must be greater than 0
 
 	>>> bg.integer_validator("Lyndon", [3, 4])
 	Traceback (most recent call last):
 	...
-	TypeError: Lyndon must be an integer
+	TypeError: yannick must be an integer
 
 	>>> bg.integer_validator("Lyndon", None)
 	Traceback (most recent call last):
 	...
-	TypeError: Lyndon must be an integer
+	TypeError: yannick must be an integer
 
 	>>> bg.integer_validator("Lyndon", True)
 	Traceback (most recent call last):
 	...
-	TypeError: Lyndon must be an integer
+	TypeError: yannick must be an integer
 
 	>>> bg.integer_validator()
 	Traceback (most recent call last):
