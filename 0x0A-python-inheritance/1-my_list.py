@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-""" My list class """
+"""Class that prints the a sorted list"""
 
 
 class MyList(list):
-    """ My list class """
+    """prints a sorted list"""
+
     def __init__(self):
-        """ Init method """
         super().__init__()
 
     def print_sorted(self):
-        """ Print the list in ascending order """
         print(sorted(self))
