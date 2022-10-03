@@ -33,3 +33,26 @@ for y in range(1, 15):
     ntwari_fam += ['patrick']  # ntwari_fam + ['patrick'],
     del ntwari_fam[5]
     print(ntwari_fam)
+
+def scopes_test():
+    def do_local():
+        spam = "local spam"
+
+    def do_nonlocal():
+        nonlocal spam
+        spam = "nonlocal spam"
+
+    def do_global():
+        global spam
+        spam = "global spam"
+
+    spam = "test spam"
+    do_local()
+    print("After local assignment:", spam)
+    do_nonlocal()
+    print("After nonlocal assignment:", spam)
+    do_global()
+    print("After global assignment:", spam)
+
+scope_test()
+print("In global scope:", spam)
